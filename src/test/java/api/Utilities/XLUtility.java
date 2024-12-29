@@ -112,7 +112,7 @@ public class XLUtility {
 	
 	public void fillGreenColor(String sheetName,int rownum,int colnum) throws IOException
 	{
-		fi=new FileInputStream(path);
+		fo=new FileOutputStream(path);
 		workbook=new XSSFWorkbook(fi);
 		sheet=workbook.getSheet(sheetName);
 		
@@ -127,14 +127,13 @@ public class XLUtility {
 		cell.setCellStyle(style);
 		workbook.write(fo);
 		workbook.close();
-		fi.close();
 		fo.close();
 	}
 	
 	
 	public void fillRedColor(String sheetName,int rownum,int colnum) throws IOException
 	{
-		fi=new FileInputStream(path);
+		fo=new FileOutputStream(path);
 		workbook=new XSSFWorkbook(fi);
 		sheet=workbook.getSheet(sheetName);
 		row=sheet.getRow(rownum);
@@ -148,7 +147,6 @@ public class XLUtility {
 		cell.setCellStyle(style);		
 		workbook.write(fo);
 		workbook.close();
-		fi.close();
 		fo.close();
 	}
 	

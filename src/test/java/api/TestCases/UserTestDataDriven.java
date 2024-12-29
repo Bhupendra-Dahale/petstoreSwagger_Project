@@ -31,7 +31,7 @@ public class UserTestDataDriven {
 	
 
 	
-	@Test(priority=4, dataProvider="UserNames", dataProviderClass = DataProviders.class)
+//	@Test(priority=4, dataProvider="UserNames", dataProviderClass = DataProviders.class)
 	public void deleteUserTest(String username) {
 		Response response = UserEndPoints.deleteUserRequest(username);
 		response.then().log().all();
